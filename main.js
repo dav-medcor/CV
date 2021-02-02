@@ -1,11 +1,13 @@
-document.getElementsByTagName("a").addEventListener ("onmouseover", cambioColor() );
-function cambioColor () {
-   alert ("Cambio color");
+const menu = document.querySelector("#menu");
+console.log (menu)
+
+menu.addEventListener ("mouseover", displayOn());
+function displayOn(){
+    menu.style.visibility = "visible"
 }
 
-const menu = document.getElementById ("menu");
-menu.addEventListener ("onmouseover", displayOn);
-function displayOn (){
-    menu.style.display ("none");
-
+menu.addEventListener ("mouseleave", displayOff());
+function displayOff() {
+    menu.style.visibility = "hidden"
 }
+
